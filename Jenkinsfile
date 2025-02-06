@@ -14,11 +14,13 @@ pipeline {
         }
     
     
-    //     stage('Build') {
-    //         steps {
-    //     sh 'npm install'
-    //   }
-    // }
-
-}
+    stage('Build') {
+            steps {
+                // Build the project (replace with your .csproj or .sln file path)
+                script {
+                    sh 'dotnet build eShopOnWeb.sln.sln --configuration Release'  // Build the solution or specific project
+                }
+            }
+        }
+   }
 }
